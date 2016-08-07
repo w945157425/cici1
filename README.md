@@ -42,4 +42,40 @@ git是一个分布式版本控制系统
   每次本地提交后，都可以使用该命令推送最新修改。
 16.git clone git@github.com:username/repo-name.git
   从远程库克隆一个本地库。
-                                                                                                     ----参考资料《Git教程》廖雪峰
+17.git checkout -b dev
+  创建并切换到名为dev的分支，相当于 git branch dev 和 git checkout dev;
+18.git branch
+  查看所有分支，当前分支前会标一个*号。
+19.git checkout master
+  切换回master分支
+20.git merge dev
+  把dev分支的工作成果合并到master分支上
+21.git branch -d dev
+  删除dev分支。
+22.git log --graph --pretty=oneline --abbrev-commit
+  查看分支情况 分支合并情况
+23.git merge --no-ff -m "description版本描述" dev
+  在禁用Fast forward的情况下合并dev分支到master分支。使用--no-ff可以看出来曾经做过合并
+24.git stash
+  可以把当前工作区暂时“储藏”起来，进行另外分支的操作
+25.git stash list
+  查看刚刚“储藏”的工作区
+26.git stash pop 
+  恢复工作区内容，并删除stash
+27.git stash apply
+  恢复工作区内容，但是并不删除stash
+28.git stash drop
+  删除stash
+29.git branch -D name
+  强行删除name分支  
+30.git remote
+  查看远程库的信息
+31.git remote -v
+  查看远程库的详细信息
+32.git pull
+  从远程抓取分支。
+33.git checkout -b branch-name origin/branch-name
+  在本地创建和远程分支对应的分支
+34.git branch --set-upstream branch-name origin/branch-name
+  建立本地分支和远程分支的关联
+                                                                                                   ----参考资料《Git教程》廖雪峰

@@ -78,4 +78,25 @@ git是一个分布式版本控制系统
   在本地创建和远程分支对应的分支
 34.git branch --set-upstream branch-name origin/branch-name
   建立本地分支和远程分支的关联
+35.git tag <name>
+  给最新的版本打上标签，便于理解，相当于软件的版本号
+36.git tag <name> commit_id
+  给commit_id的版本打上标签
+37.git tag
+  查看标签
+38.git show <name>
+  查看某个标签的详细信息
+39.git tag -a <name> -m "description描述" commit_id
+  创建带有说明的标签 -a指定标签名， -m指定说明文字
+40.git tag -s <name> -m "description描述" commit_id
+  通过-s用私钥签名一个标签
+41.git tag -d <name>
+  删除某个标签
+42.git push origin <name>
+  推送某个标签到远程
+43.git push origin --tags
+  一次性推送全部标签到远程
+44.git tag -d <name> /git push origin :refs/tags/<name>
+  要删除已经推送到远程的标签，首先删除本地标签，再删除远程标签。
+
                                                                                                    ----参考资料《Git教程》廖雪峰
